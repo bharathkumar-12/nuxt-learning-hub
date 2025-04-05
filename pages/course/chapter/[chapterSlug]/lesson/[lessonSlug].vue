@@ -14,7 +14,7 @@
 			fugiat sint ex ipsum, voluptatibus, odit ad facilis in modi.
 		</p>
         
-            <LessonCompleteButton
+        <LessonCompleteButton
 			:modelValue="isLessonComplete"
 			@update:modelValue="toggleComplete"
 		/>
@@ -22,7 +22,7 @@
 		
 	</div>
 </template>
-<script setup lang="ts">
+<script setup >
 const course = useCourse();
 const route = useRoute();
 const chapter = computed(() => {
@@ -62,5 +62,9 @@ const toggleComplete = () => {
 	progress.value[chapter.value.number - 1][
 		lesson.value.number - 1
 	] = !isLessonComplete.value;
-};
+}
+
+function createError(){
+	throw createError('Could not update' )
+}
 </script>
