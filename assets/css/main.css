@@ -1,1 +1,74 @@
 @import "tailwindcss";
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+@theme {
+  --color-primary: #00475e;
+  --color-primary-container: #1a5f7a;
+  --color-primary-fixed: #c0e8ff;
+  --color-primary-fixed-dim: #92cfee;
+  --color-on-primary: #ffffff;
+
+  --color-secondary: #4c616c;
+  --color-secondary-container: #cfe6f2;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #526772;
+
+  --color-tertiary: #693100;
+  --color-tertiary-container: #8c4400;
+  --color-tertiary-fixed: #ffdcc6;
+  --color-on-tertiary: #ffffff;
+
+  --color-surface: #f8f9fc;
+  --color-surface-container: #eceef0;
+  --color-surface-container-low: #f2f4f6;
+  --color-surface-container-high: #e7e8ea;
+  --color-surface-container-highest: #e1e2e5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-dim: #d8dadc;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-outline: #70787d;
+  --color-outline-variant: #c0c8cd;
+
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #40484d;
+  --color-on-background: #191c1e;
+  --color-inverse-surface: #2e3133;
+
+  --font-sans: 'Lexend', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+  background-color: #f8f9fc;
+  color: #191c1e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', sans-serif;
+}

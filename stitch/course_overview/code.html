@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modern Architecture - The Academic Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#92cfee",
+              "inverse-primary": "#92cfee",
+              "surface": "#f8f9fc",
+              "error": "#ba1a1a",
+              "primary-container": "#1a5f7a",
+              "on-primary-container": "#9bd7f7",
+              "surface-container-high": "#e7e8ea",
+              "inverse-on-surface": "#eff1f3",
+              "on-error-container": "#93000a",
+              "background": "#f8f9fc",
+              "outline": "#70787d",
+              "on-error": "#ffffff",
+              "secondary": "#4c616c",
+              "on-tertiary-container": "#ffc299",
+              "secondary-fixed-dim": "#b4cad6",
+              "tertiary-fixed-dim": "#ffb786",
+              "secondary-fixed": "#cfe6f2",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "tertiary": "#693100",
+              "secondary-container": "#cfe6f2",
+              "on-primary-fixed-variant": "#004d66",
+              "on-secondary": "#ffffff",
+              "primary": "#00475e",
+              "surface-container-highest": "#e1e2e5",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#526772",
+              "surface-bright": "#f8f9fc",
+              "on-background": "#191c1e",
+              "on-secondary-fixed-variant": "#354a53",
+              "on-tertiary-fixed-variant": "#723600",
+              "surface-container": "#eceef0",
+              "primary-fixed": "#c0e8ff",
+              "on-primary-fixed": "#001e2b",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#40484d",
+              "on-surface": "#191c1e",
+              "tertiary-container": "#8c4400",
+              "surface-variant": "#e1e2e5",
+              "inverse-surface": "#2e3133",
+              "surface-dim": "#d8dadc",
+              "tertiary-fixed": "#ffdcc6",
+              "on-tertiary-fixed": "#311300",
+              "surface-tint": "#236580",
+              "outline-variant": "#c0c8cd",
+              "surface-container-low": "#f2f4f6",
+              "on-secondary-fixed": "#071e27"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Lexend"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f8f9fc] dark:bg-[#191c1e] backdrop-blur-xl bg-opacity-70 shadow-[0_0_40px_rgba(25,28,30,0.06)] h-20">
+<div class="flex justify-between items-center px-8 h-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-black text-[#00475e] dark:text-[#00b8d9] italic font-headline">The Academic Curator</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#44474a] dark:text-[#c4c7ca] font-medium hover:text-[#1a5f7a] dark:hover:text-[#7dd3fc] transition-colors duration-200 font-label" href="#">Catalog</a>
+<a class="text-[#44474a] dark:text-[#c4c7ca] font-medium hover:text-[#1a5f7a] dark:hover:text-[#7dd3fc] transition-colors duration-200 font-label" href="#">Dashboard</a>
+<a class="text-[#00475e] dark:text-[#00b8d9] border-b-2 border-[#00475e] pb-1 font-bold font-label" href="#">My Courses</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-[#44474a] scale-95 active:scale-90 transition-transform" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-[#44474a] scale-95 active:scale-90 transition-transform" data-icon="settings">settings</button>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img alt="Student Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXsBQ6u1CzlZDPUGQDYo3cwbTYhARYPGpXP_zItLD7UhXgemV1WCXcVIFhpXZI4UzO7n5-1IOem9yhRrN2gP2LqnAcvj6djmvTglyBcIE0XEGU_OmeqAPr0JgXl1CpupxrRlvMy1gu9yaNbKeiMJbpIf2XH2AEXzJNU12U_b7DMXpsCf9iIWm2Sz39lrP82o-8pCg5mdnvA0Kox_g8eljPmirsrE6-1WH1UEOba6Z-FdWBeJRVRIPdwkdMjb0jm61LWCrvCnEEAM4"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[614px] min-h-[450px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Modern Architecture" class="w-full h-full object-cover" data-alt="Abstract geometric glass building reflecting the sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_BhuYW_hLvlP-l9Ra49u0Qu-VrxRc3ixxHSNUqk2h0ZS8i4fSQkzK3SHsiBg_8B5pHU1XPJEHM9n53mukQ7cj8OVK32kbGiMwNymE3cVlyjlmDV732jbHtRq-lmOJS78i4keeI4ahcsm2hNHeApQTWhVf4hhuFfwJa1QIhc_Ppf5Es9KYX3rA65Yz_IJPYzTkJRIPrWtVijiCVjpUZzlfshsJfPmsb_Pyo-O8ieTCamdcPIBHvoFFs5On-ZFWXvKI_I5GWagqwBA"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface via-on-surface/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-[1440px] mx-auto px-8 w-full">
+<div class="max-w-2xl space-y-6">
+<div class="flex items-center gap-3">
+<span class="bg-primary px-3 py-1 rounded-full text-white text-xs font-bold font-label uppercase tracking-widest">Featured Course</span>
+<div class="flex items-center gap-1 text-tertiary-fixed">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.9 (2.4k Reviews)</span>
+</div>
+</div>
+<h1 class="text-6xl font-extrabold text-white font-headline leading-[1.1] tracking-tight">Modern Architecture</h1>
+<p class="text-surface-container-highest text-lg max-w-xl font-light leading-relaxed">
+                        A definitive journey through the evolution of space, form, and functionality in the 21st century. Learn from industry leaders about the synthesis of technology and human-centric design.
+                    </p>
+<div class="flex items-center gap-6 pt-4">
+<div class="flex items-center gap-2 text-white/80">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span class="text-sm font-medium">12 Weeks • 45 Hours</span>
+</div>
+<div class="flex items-center gap-2 text-white/80">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="text-sm font-medium">Professional Certificate</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Grid -->
+<section class="max-w-[1440px] mx-auto px-8 py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left Column: Syllabus -->
+<div class="lg:col-span-8 space-y-12">
+<div class="space-y-4">
+<h2 class="text-3xl font-bold font-headline text-on-surface">Course Curriculum</h2>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+</div>
+<!-- Syllabus Accordion -->
+<div class="space-y-6">
+<!-- Module 1 -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden group">
+<div class="p-6 flex items-center justify-between cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold">01</div>
+<div>
+<h3 class="font-bold text-lg">Foundations of Modernism</h3>
+<p class="text-sm text-on-surface-variant">4 Lessons • 120 Minutes</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-y-1 transition-transform" data-icon="expand_more">expand_more</span>
+</div>
+<div class="px-6 pb-6 pt-2 space-y-2">
+<div class="flex items-center justify-between p-4 bg-white rounded-lg group/item hover:border-primary transition-all">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="play_circle">play_circle</span>
+<span class="font-medium">Introduction to Spatial Theory</span>
+</div>
+<span class="text-sm text-on-surface-variant">25:00</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white rounded-lg group/item hover:border-primary transition-all">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="menu_book">menu_book</span>
+<span class="font-medium">The Bauhaus Legacy</span>
+</div>
+<span class="text-sm text-on-surface-variant">Reading</span>
+</div>
+</div>
+</div>
+<!-- Module 2 -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden group">
+<div class="p-6 flex items-center justify-between cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold">02</div>
+<div>
+<h3 class="font-bold text-lg">Sustainable Materials &amp; Tech</h3>
+<p class="text-sm text-on-surface-variant">6 Lessons • 185 Minutes</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- Module 3 -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden group border-l-4 border-primary">
+<div class="p-6 flex items-center justify-between cursor-pointer bg-primary/5">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center text-white font-bold">03</div>
+<div>
+<h3 class="font-bold text-lg">Advanced Structural Theory</h3>
+<p class="text-sm text-primary">In Progress • 8 Lessons</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary rotate-180" data-icon="expand_more">expand_more</span>
+</div>
+<div class="px-6 pb-6 pt-4 space-y-3">
+<div class="flex items-center justify-between p-4 bg-white rounded-lg border-l-4 border-primary shadow-sm">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span class="font-bold">Parametric Design Deep Dive</span>
+</div>
+<span class="text-primary font-bold">42:15</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white/50 rounded-lg opacity-80">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+<span class="font-medium">BIM Workflows for Scale</span>
+</div>
+<span class="text-sm">35:00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Instructor Section -->
+<div class="pt-10">
+<div class="bg-surface-container-low p-10 rounded-3xl flex flex-col md:flex-row gap-10 items-center">
+<img alt="Instructor Profile" class="w-32 h-32 rounded-2xl object-cover shadow-xl" data-alt="Portrait of a male professional architect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU3iPo9M8_xP-Ec--V9cnrU8DN9cZ7GYcicJbhKZ43AMdUhgfyZeo8vNi28LAYZwlBYlcCjqdT_QBM-lN727BBEIkXD0SUx-DG0or-XBwsv_apLYZ3FJWwbLUVWWgwVDOpwnCqipWoRoJSWbyPZdcGOJXCCxf5mtlB-8nOLMiXHSSnU0klS1yJsSMLXvzLayg0mOU8YNhuv5NGGNYHXCsdEjyCtqKDCEW8K5cfCaWOw4rvLgwdVCbUQN6IFKtomuWN4KcClVsIeYo"/>
+<div class="space-y-4 text-center md:text-left">
+<h4 class="text-label-md text-primary font-bold uppercase tracking-widest">Your Instructor</h4>
+<h3 class="text-3xl font-bold font-headline">Dr. Julian Thorne</h3>
+<p class="text-on-surface-variant max-w-lg">Principal at Thorne &amp; Partners. With over 20 years of experience designing skyscrapers across four continents, Julian brings practical expertise to architectural theory.</p>
+<button class="text-primary font-bold flex items-center gap-2 mx-auto md:mx-0 hover:underline">
+                                    View Full Bio <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Info & CTA -->
+<div class="lg:col-span-4">
+<div class="sticky top-28 space-y-8">
+<!-- Enrollment Card -->
+<div class="bg-surface-container-lowest rounded-3xl p-8 shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-outline-variant/10">
+<div class="space-y-6">
+<div class="relative aspect-video rounded-2xl overflow-hidden mb-8">
+<img alt="Course Preview" class="w-full h-full object-cover" data-alt="Office building interior with modern furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIIyv9UywylkTuwTFODy38Oea4q33EdUu93sUid8yeyNr8hZTMqv7ivK21GJVcJKBYfA0j5VH1wGl7j7JSbaT_nVThI1xxjALBLcu_VPmM_b1Z3adOAfnbtfdWS_B_FwuwcGDW4XfBJzYs1MUVTLBT3vI5voKtIzFv3ucVXV6OaGd2kPly97WB8cuj8jWfGxu3Vt035zjJ5NwM73dwgRfjABDTbgOaLN7jK6ZsmOBBXBIN9p3DhlAXCrRJN91_IFsXZ4zzAWPqdH8"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<button class="w-16 h-16 rounded-full bg-white text-primary flex items-center justify-center shadow-2xl scale-100 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-4xl font-extrabold text-on-surface">$249.00</span>
+<span class="text-on-surface-variant line-through mb-1">$499.00</span>
+<span class="ml-auto bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-lg text-xs font-bold uppercase">50% OFF</span>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-white font-bold py-5 rounded-xl shadow-lg shadow-primary/20 active:scale-[0.98] transition-all">
+                                    Enroll in Course Now
+                                </button>
+<button class="w-full bg-surface-container-high text-on-surface font-bold py-5 rounded-xl active:scale-[0.98] transition-all">
+                                    Add to Wishlist
+                                </button>
+<div class="space-y-4 pt-4 border-t border-outline-variant/20">
+<h4 class="font-bold text-sm text-on-surface-variant uppercase tracking-wider">Course Includes</h4>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="verified">verified</span>
+                                            Lifetime access to all materials
+                                        </li>
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="description">description</span>
+                                            32 Downloadable resources
+                                        </li>
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="devices">devices</span>
+                                            Access on mobile and desktop
+                                        </li>
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="workspace_premium">workspace_premium</span>
+                                            Certificate of completion
+                                        </li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Related Stats / Bento Piece -->
+<div class="bg-primary text-white p-8 rounded-3xl relative overflow-hidden">
+<div class="relative z-10 space-y-4">
+<h4 class="text-primary-fixed font-bold text-sm tracking-widest uppercase">Community Impact</h4>
+<div class="text-5xl font-black font-headline">8.4k</div>
+<p class="text-primary-fixed-dim text-sm leading-relaxed">Students have already transformed their careers through this curriculum.</p>
+<div class="flex -space-x-3 pt-2">
+<img alt="user" class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="Portrait of a young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc5v9kiWVCwp5kouWmzabkJkqLEMMK9ihtULFQvRZ8s5tfSUvoxTo345KsD3c6osHP7aJNXg5c31Y7n7AVzW9IJWF8d_-9PP1bTX4vYglFP82Ht6RsmdgwRaVoCV6PXX4o6XvZl5s4z0u6sqE-YogcIwcaH7jyU9NlzTAq0AD5a_DI-gts9SXUTPnRbz_Lnwsqxyvs_dABgW0fhjIP7e9y_blURcL_LjL56WpymJBaAnM3p0dHSr7iGljdlaRtVGE0v2TLgAQElTs"/>
+<img alt="user" class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="Portrait of a young woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoKXSlEq2jfYE0td8bPJibt9c9SsPO8zFQa7m4evc3-mfbuEhTO9ab_46TDDhAWBMHWxqRxBgHk2_l5BiqhKJB2_vY77WHpzhFn5HRkPs1wrXUUhVJY7xSyKJuGqaRkIjpnVCdwv0Qwo3-88W02YngV0ou6zLBJUhCWHhs8GF0em5qW2Avi4-9F5_j1Q7UWzNiXr1PmvDQApacXxjNA9N6RU1Xh7D6bDsEH840ItgaSfv_i3Mm5gSTsHL0tUANIbRpkcd6fO9DRuE"/>
+<img alt="user" class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="Portrait of a business man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATMANK2IMrlM3KnA2oSEYfl8zcR_gll3WqNfyGyfsWgKpTsNlQSYcGeyBZYGF3rqVOai5JvAE00hXhmYB4d56Q2gIWS25dBp5d8NxZO4NEYoCfx-UZq17N-_gPTYKluAAKBxhU-MU0l8rDz7YBzC1C0ECxSLR7E4Aq8DDMTC7ycmSsFiOM2GA-0YspJaBaPDgsJu0lwAhehOXdGmC9H6OrbsmYoainhagLDvNPDARvCWxiIqkrGWZUqIlGGyVytYTtEJ4oqKETJlg"/>
+<div class="w-10 h-10 rounded-full border-2 border-primary bg-primary-container flex items-center justify-center text-xs font-bold">+8k</div>
+</div>
+</div>
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter/Footer Hint -->
+<section class="bg-surface-container-high py-20 mt-20">
+<div class="max-w-[1440px] mx-auto px-8 text-center space-y-8">
+<h2 class="text-4xl font-black font-headline max-w-2xl mx-auto leading-tight">Ready to redesign your professional future?</h2>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<input class="bg-white border-none rounded-xl px-6 py-5 w-full max-w-md focus:ring-2 focus:ring-primary shadow-sm" placeholder="Enter your academic email" type="email"/>
+<button class="bg-on-surface text-surface px-10 py-5 rounded-xl font-bold hover:bg-on-surface/90 transition-all whitespace-nowrap">Get Syllabus PDF</button>
+</div>
+<p class="text-on-surface-variant text-sm">Join 12,000+ monthly learners receiving our architectural digest.</p>
+</div>
+</section>
+</main>
+<!-- Simple Footer -->
+<footer class="bg-surface-container py-12">
+<div class="max-w-[1440px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-xl font-black text-primary italic font-headline">The Academic Curator</div>
+<div class="flex gap-8 text-on-surface-variant font-medium text-sm">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+<div class="text-on-surface-variant text-sm">© 2024 The Academic Curator. All rights reserved.</div>
+</div>
+</footer>
+</body></html>

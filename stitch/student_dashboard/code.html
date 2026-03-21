@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#92cfee",
+              "inverse-primary": "#92cfee",
+              "surface": "#f8f9fc",
+              "error": "#ba1a1a",
+              "primary-container": "#1a5f7a",
+              "on-primary-container": "#9bd7f7",
+              "surface-container-high": "#e7e8ea",
+              "inverse-on-surface": "#eff1f3",
+              "on-error-container": "#93000a",
+              "background": "#f8f9fc",
+              "outline": "#70787d",
+              "on-error": "#ffffff",
+              "secondary": "#4c616c",
+              "on-tertiary-container": "#ffc299",
+              "secondary-fixed-dim": "#b4cad6",
+              "tertiary-fixed-dim": "#ffb786",
+              "secondary-fixed": "#cfe6f2",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "tertiary": "#693100",
+              "secondary-container": "#cfe6f2",
+              "on-primary-fixed-variant": "#004d66",
+              "on-secondary": "#ffffff",
+              "primary": "#00475e",
+              "surface-container-highest": "#e1e2e5",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#526772",
+              "surface-bright": "#f8f9fc",
+              "on-background": "#191c1e",
+              "on-secondary-fixed-variant": "#354a53",
+              "on-tertiary-fixed-variant": "#723600",
+              "surface-container": "#eceef0",
+              "primary-fixed": "#c0e8ff",
+              "on-primary-fixed": "#001e2b",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#40484d",
+              "on-surface": "#191c1e",
+              "tertiary-container": "#8c4400",
+              "surface-variant": "#e1e2e5",
+              "inverse-surface": "#2e3133",
+              "surface-dim": "#d8dadc",
+              "tertiary-fixed": "#ffdcc6",
+              "on-tertiary-fixed": "#311300",
+              "surface-tint": "#236580",
+              "outline-variant": "#c0c8cd",
+              "surface-container-low": "#f2f4f6",
+              "on-secondary-fixed": "#071e27"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Lexend"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<nav class="fixed top-0 w-full z-50 bg-[#f8f9fc] dark:bg-[#191c1e] backdrop-blur-xl bg-opacity-70 shadow-[0_0_40px_rgba(25,28,30,0.06)]">
+<div class="flex justify-between items-center px-8 h-20 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-black text-[#00475e] dark:text-[#00b8d9] italic font-headline">The Academic Curator</span>
+<div class="hidden md:flex gap-8">
+<a class="text-[#44474a] dark:text-[#c4c7ca] font-medium hover:text-[#1a5f7a] dark:hover:text-[#7dd3fc] transition-colors duration-200 font-headline" href="#">Catalog</a>
+<a class="text-[#00475e] dark:text-[#00b8d9] border-b-2 border-[#00475e] pb-1 font-bold font-headline" href="#">Dashboard</a>
+<a class="text-[#44474a] dark:text-[#c4c7ca] font-medium hover:text-[#1a5f7a] dark:hover:text-[#7dd3fc] transition-colors duration-200 font-headline" href="#">My Courses</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container rounded-full border-none focus:ring-2 focus:ring-primary w-64 text-sm" placeholder="Search knowledge..." type="text"/>
+</div>
+<div class="flex gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<img alt="Student Profile" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-container/20" data-alt="Close up portrait of a male student smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEp04i8KFxvh0V6Yl5BJQVKHCus88GKYcn_rfzHIU0cjCFl5pQ3CljR4vnp55v0qktmnZW0DFf0HGntLswKX06zEn_HjeLthRWLsyRR_6-4SS2Ke_pNmkjD9XkOwJWRQ2a812wMatOUYxaGy82R6GrHYPGeHzPlJ1lrozkYWaHyu7V8aaIepymYWouSYOD8d2BX4qSXiJWSgQLPXGl3GdodkapnFzmS2ePxipYJIMTPMtn3OfhUn_nB1Uo2aaEVI6Jreh76VQEiDQ"/>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-8 max-w-[1440px] mx-auto">
+<header class="mb-12">
+<h1 class="font-headline font-extrabold text-5xl text-on-surface tracking-tight mb-2">Welcome back, Julian.</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl">Your intellectual journey is 64% complete for this semester. Continue where you left off in <span class="text-primary font-semibold italic">Modern Architecture</span>.</p>
+</header>
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-20">
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] flex flex-col justify-between">
+<div>
+<span class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant opacity-60">Learning Velocity</span>
+<h2 class="font-headline font-bold text-3xl mt-4">128.5 Hours</h2>
+<p class="text-on-surface-variant mt-1">Invested in active learning this year</p>
+</div>
+<div class="mt-8 flex items-end gap-2 h-24">
+<div class="flex-1 bg-surface-container-high h-[40%] rounded-t-lg"></div>
+<div class="flex-1 bg-surface-container-high h-[65%] rounded-t-lg"></div>
+<div class="flex-1 bg-primary h-[85%] rounded-t-lg"></div>
+<div class="flex-1 bg-surface-container-high h-[50%] rounded-t-lg"></div>
+<div class="flex-1 bg-primary h-[95%] rounded-t-lg"></div>
+<div class="flex-1 bg-surface-container-high h-[75%] rounded-t-lg"></div>
+<div class="flex-1 bg-primary h-[100%] rounded-t-lg"></div>
+</div>
+</div>
+<div class="bg-primary p-8 rounded-xl text-on-primary flex flex-col justify-between relative overflow-hidden">
+<div class="relative z-10">
+<span class="font-label text-xs font-bold uppercase tracking-widest opacity-80">Milestones</span>
+<h2 class="font-headline font-bold text-4xl mt-4">12</h2>
+<p class="opacity-90 mt-1">Courses Mastered</p>
+</div>
+<div class="relative z-10 flex gap-2 mt-8">
+<div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 w-32 h-32 bg-primary-container rounded-full opacity-50 blur-2xl"></div>
+</div>
+<div class="bg-tertiary p-8 rounded-xl text-on-tertiary flex flex-col justify-between">
+<div>
+<span class="font-label text-xs font-bold uppercase tracking-widest opacity-80">Current Rank</span>
+<h2 class="font-headline font-bold text-3xl mt-4">Curator Elite</h2>
+<p class="opacity-90 mt-1">Top 5% of active researchers</p>
+</div>
+<button class="mt-8 py-3 bg-white/10 hover:bg-white/20 transition-all rounded-lg font-headline font-bold text-sm">View Leaderboard</button>
+</div>
+</section>
+<section class="mb-20">
+<div class="flex justify-between items-end mb-8">
+<div>
+<span class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant opacity-60">Pick up the pace</span>
+<h3 class="font-headline font-bold text-3xl text-on-surface">Continue Learning</h3>
+</div>
+<a class="text-primary font-bold hover:underline flex items-center gap-2" href="#">
+                    Resume all <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition-all duration-300">
+<div class="w-full md:w-1/2 aspect-video relative">
+<img alt="Modern Architecture" class="w-full h-full object-cover" data-alt="Futuristic concrete building with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBupn7z0KXqgkwNsgDSp4n-zCmRNQQb0XWaRFuHvZt8-101o0ymZFrYwkR-0XfS69iTD11qAtuRBhOVn7zJ2x32oNhstUtJPE4rVGItuZFuT-QLw51LqMJ0Jwpq1pokSxE_snfOC3IAvnX2t48uLfNByRrJgnAZtqtlDqJpwgpAnk4FKIuy_f3lFu_oHXRIh0AFgXSU6ujX7LLzE7MIoeJnvJ_nRQrjwkMhzfD2LvfyDfei2Z9KdeypVb3pbbuYpnXxV-7XHPgrz88"/>
+<div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary shadow-2xl scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between bg-surface-container-low">
+<div>
+<div class="flex justify-between items-start mb-2">
+<span class="text-primary font-bold text-sm">Design Theory</span>
+<span class="text-on-surface-variant text-xs">85% Complete</span>
+</div>
+<h4 class="font-headline font-bold text-xl leading-tight mb-4">Modern Architecture &amp; Urban Space</h4>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-primary to-primary-container h-full w-[85%] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition-all duration-300">
+<div class="w-full md:w-1/2 aspect-video relative">
+<img alt="Quantum Physics" class="w-full h-full object-cover" data-alt="Abstract visualization of quantum particles and light waves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9f-kPjrOJ2JzTJ14Cg0Tin8zmZ-hMdcom4PdDB66Qp4XBKL4BNNbV7CLbbtWP12LFwTh2rCElmSEyoaKo-qCmn__nX-GqF60r-4yqOgWEd1XQOwuvY4NEc4ZbrmSpAqrFYD1zQRZ9rgPyOOAVKqQYrUfYqDphCwvjrMl8CNoXyhHFRZ1mwSGfQYuPtzaAE7dfVa0F6h9NHIaIEDpdog7arBL7gCD-3KKuKNJ7nFaHQ9PkRN1hIPQ769f7nxW7Lg-vh-tCPNfw68s"/>
+<div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary shadow-2xl scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between bg-surface-container-low">
+<div>
+<div class="flex justify-between items-start mb-2">
+<span class="text-primary font-bold text-sm">Theoretical Science</span>
+<span class="text-on-surface-variant text-xs">22% Complete</span>
+</div>
+<h4 class="font-headline font-bold text-xl leading-tight mb-4">Introduction to Quantum Mechanics</h4>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-primary to-primary-container h-full w-[22%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 xl:grid-cols-3 gap-12">
+<div class="xl:col-span-2">
+<div class="flex items-center gap-4 mb-8">
+<h3 class="font-headline font-bold text-2xl">Enrolled Courses</h3>
+<div class="h-px flex-1 bg-outline-variant opacity-30"></div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center p-4 bg-surface-container-lowest rounded-xl hover:bg-surface-container transition-colors group">
+<div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container-high shrink-0">
+<img alt="Digital Art" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A vintage computer and neon lighting setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkv_q7sROGDfUyF9u8ZMnVDAGWhH7oYKu7AhwFVklcHa9O2odkVWRyX-HYpiV7jUygrtUZ5Uy2ZFtG8bN2OVuNMPVi82Aaz2sNnAYI0eEwm1hw7hCVfGargS0AKKRvKODJQNtrhM78dO6g8MElMYcQL2LxGCz12jf07LU-1Wtdg8ne5py5lAyZ5ZCqtV9gdjMDYTwSqMyNYMoUkRBID6Rws_Dey56xkXapuEP83KYROrJ1UQ8-oGLbNxnDF0r7j7XmEY2OkCXA3J0"/>
+</div>
+<div class="ml-6 flex-1">
+<h5 class="font-headline font-bold text-on-surface">Digital Anthropology 101</h5>
+<p class="text-sm text-on-surface-variant">Prof. Sarah Jenkins • 12 Modules</p>
+</div>
+<button class="px-4 py-2 text-primary font-bold text-sm bg-primary/5 rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-all">
+                            Open
+                        </button>
+</div>
+<div class="flex items-center p-4 bg-surface-container-lowest rounded-xl hover:bg-surface-container transition-colors group">
+<div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container-high shrink-0">
+<img alt="Economics" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close up of stock market charts on a screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM0z0MPxHho-dKi_JgKetYBRIRAKpj0C4X-5I9iVX_7d7zGRifR8_aXcPl_XoeW3eAXdp3kBSr9ldTD1GIYbytCJPyyJpOco9EifXkELnJpTq6pUlBkM_MHE1995DDXg0Rh2A10j2MKlTMhKcUmCRBOk6rDKspCxQs5gJ6E7J1URNcPfwyJF14YX7om2RdsNIkwaqZvA3wxs3k8OS6zna_Qv10MYAgzoG5sDqRHbVPIlVAwKB1B45AZJsQvlro3xXoRVYhBO6Yyk4"/>
+</div>
+<div class="ml-6 flex-1">
+<h5 class="font-headline font-bold text-on-surface">Behavioral Economics</h5>
+<p class="text-sm text-on-surface-variant">Dr. Alan Turing • 8 Modules</p>
+</div>
+<button class="px-4 py-2 text-primary font-bold text-sm bg-primary/5 rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-all">
+                            Open
+                        </button>
+</div>
+<div class="flex items-center p-4 bg-surface-container-lowest rounded-xl hover:bg-surface-container transition-colors group">
+<div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container-high shrink-0">
+<img alt="Data Science" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Abstract data visualization with blue and purple lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgk0I2LgECG6lQtlj88Dza1yk8e9rVN4bk4DA2Ki73w_GKuESzjliyXDp5MvqyUTxOopZAj7XT1RrejMI1kxSNE35ntYFUAPmUpvoP074Mc7Z7G16KaCFN4oGUiDFqK8lXQ6oW-q7t9GZ9VaHvFD8zYuI8rKoNHSEIxxwUuh5C1-MOCp0BC52B_P8-DrP23J9B0C0HUESK_9Ud6yxqRg0yyWolHhEpmi1EzKMCRR5518jYKasSa5Bl5BcmRlW2sQAVH5ngzjW4hPI"/>
+</div>
+<div class="ml-6 flex-1">
+<h5 class="font-headline font-bold text-on-surface">Data Narrative Design</h5>
+<p class="text-sm text-on-surface-variant">Prof. Emily Chen • 15 Modules</p>
+</div>
+<button class="px-4 py-2 text-primary font-bold text-sm bg-primary/5 rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-all">
+                            Open
+                        </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-8 h-fit">
+<h3 class="font-headline font-bold text-2xl mb-6">Recommendations</h3>
+<div class="space-y-8">
+<div class="relative group cursor-pointer">
+<div class="aspect-video rounded-xl overflow-hidden mb-4">
+<img alt="Bioethics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up of a DNA helix model with artistic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-TvBYDHNFd_E1VfnPZYHIKcVEMZSfOmei0yWs7aiMGuEbzbb3WhSU5883d5nBVNCbxqAUVvTsHN03E1T852WyCaSFSY1lW_q3cYQLb9j-4usvaEnmGB0tIoVk6BxG36kYV1ABsJ0_5fPqEgKXv0NcoL4EgrMFxEwKzMNxouxfF0I9YqAJlu1XjStfMTPCLThrJOnsX_SkIUUtCbBYh3DBz40wUirMiHg1cLtDlIyf6U3qlH9TQmIobXW9T2M71P5bgH8d77dBg7I"/>
+</div>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-primary mb-1 block">New Release</span>
+<h6 class="font-headline font-bold text-lg leading-tight group-hover:text-primary transition-colors">The Ethics of CRISPR &amp; Gene Editing</h6>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-sm text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.9</span>
+<span class="text-xs text-on-surface-variant opacity-60">• 12k Students</span>
+</div>
+</div>
+<div class="relative group cursor-pointer">
+<div class="aspect-video rounded-xl overflow-hidden mb-4">
+<img alt="History" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An old antique book open on a dark wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP3SPg1mz_tRJcRge8eXunIXF-2bMykKbDk5gg139BX85jkOqYCS3eeW_z6ESDcXagC3eo6dGQ1OZfW1AYoFpaQptWyrWIWReadlZxw2CNUQtBs97sUPmrckKFIGArYqmTGdpw1V26jFegYxvBnwf7awJSHgOllwM6Kc2_tyPMxtq702lEwdwHGWcI8kyAbQ5lZyEwtOuGutsZLMWQaEQZqorNqhaEIRLEgNh8xueC1Yn677iOih9WoJf03TBT7eNJ4Xrus2dN-oA"/>
+</div>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-primary mb-1 block">Trending</span>
+<h6 class="font-headline font-bold text-lg leading-tight group-hover:text-primary transition-colors">Renaissance Art History: A Deep Dive</h6>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-sm text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.8</span>
+<span class="text-xs text-on-surface-variant opacity-60">• 8.5k Students</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-10 py-4 border-2 border-primary/20 text-primary font-headline font-bold rounded-xl hover:bg-primary hover:text-white transition-all">Explore Full Catalog</button>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container py-12 px-8">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start">
+<span class="text-xl font-black text-primary italic font-headline mb-2">The Academic Curator</span>
+<p class="text-on-surface-variant text-sm text-center md:text-left">Elevating the standard of digital education through premium curation.</p>
+</div>
+<div class="flex gap-12 text-sm font-headline font-bold opacity-60">
+<a class="hover:opacity-100 transition-opacity" href="#">Privacy</a>
+<a class="hover:opacity-100 transition-opacity" href="#">Terms</a>
+<a class="hover:opacity-100 transition-opacity" href="#">Help Center</a>
+<a class="hover:opacity-100 transition-opacity" href="#">API</a>
+</div>
+</div>
+</footer>
+</body></html>
