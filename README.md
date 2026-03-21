@@ -3,7 +3,8 @@
 
 A modern, interactive course learning platform built with Nuxt 3, featuring dynamic course progression, video lessons, and completion tracking.
 
-![demo](https://github.com/user-attachments/assets/52ecb7a1-00c5-40c0-910c-aad9d732f28c)
+<img width="1068" height="723" alt="Screenshot 2026-03-21 at 9 18 28 PM" src="https://github.com/user-attachments/assets/8510a617-586a-4bb3-be75-407893af771c" />
+
 
 ## 🌐 Live Demo
 
