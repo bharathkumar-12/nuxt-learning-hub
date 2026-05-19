@@ -195,3 +195,9 @@ This project is available for educational and personal use.
 ---
 
 **Built with ❤️ using Nuxt 3**
+
+---
+
+## Maintenance
+
+Last maintenance update: <!--LAST_UPDATED-->2026-05-19<!--/LAST_UPDATED-->
