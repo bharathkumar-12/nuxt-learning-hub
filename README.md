@@ -5,7 +5,6 @@ A modern, interactive course learning platform built with Nuxt 3, featuring dyna
 
 <img width="1068" height="723" alt="Screenshot 2026-03-21 at 9 18 28 PM" src="https://github.com/user-attachments/assets/8510a617-586a-4bb3-be75-407893af771c" />
 
-
 ## 🌐 Live Demo
 
 **[View Live Application →](https://darling-cuchufli-f007f1.netlify.app/)**
