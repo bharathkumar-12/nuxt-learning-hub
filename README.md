@@ -200,3 +200,5 @@ This project is available for educational and personal use.
 ## Maintenance
 
 Last maintenance update: <!--LAST_UPDATED-->2026-05-29<!--/LAST_UPDATED-->
+<!-- changelog:2026-06-04 -->
+<!-- Maintenance pass: 2026-06-04 -->
