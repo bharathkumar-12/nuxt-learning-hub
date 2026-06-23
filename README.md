@@ -40,20 +40,30 @@ Nuxt-Restart/
 ├── assets/
 │   └── css/
 │       └── main.css          # Global styles and Tailwind imports
+
 ├── components/
 │   ├── LessonCompleteButton.client.vue  # Client-only completion tracking
+
 │   └── VideoPlayer.vue       # Reusable video player component
+
 ├── composables/
 │   ├── courseData.js         # Course data structure
+
 │   └── useCourse.ts          # Course state management composable
+
 ├── layouts/
 │   └── default.vue           # Main application layout
+
 ├── pages/
 │   ├── index.vue             # Home/landing page
+
 │   ├── course.vue            # Course overview page
+
 │   ├── 404.vue               # Custom error page
+
 │   └── course/chapter/[chapterSlug]/lesson/[lessonSlug].vue
 └── public/                   # Static assets
+
 ```
 
 ## 🚀 Getting Started
@@ -75,16 +85,21 @@ cd Nuxt-Restart
 2. **Install dependencies**
 
 ```bash
+
 # Using npm
+
 npm install
 
 # Using pnpm
+
 pnpm install
 
 # Using yarn
+
 yarn install
 
 # Using bun
+
 bun install
 ```
 
@@ -149,7 +164,9 @@ Refer to the [Nuxt deployment documentation](https://nuxt.com/docs/getting-start
 Create a `.env` file in the root directory for environment-specific configuration:
 
 ```env
+
 # Add your environment variables here
+
 ```
 
 ### Nuxt Config
